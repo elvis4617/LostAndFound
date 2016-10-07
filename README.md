@@ -18,4 +18,5 @@ Web Application using React, Bootstrap, Node.js, and MongoDB, etc.
 13. mongod --dbpath laf-data
 14. go back to frist Nodejs command prompt
 15. node src/server.js
-16. open localhost:3000
+16. open third terminal and cd into client and run npm run watch
+17. open localhost:3000
