@@ -18,20 +18,8 @@ export default class Lost_list extends React.Component {
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
 
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  								<span className="color-blue"></span>
-  								<span className="color-orange"></span>
-  								<span className="color-green"></span>
-  							</div>
-
-  							<div className="price">
-  								$999.99
-  							</div>
-
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
 
@@ -44,15 +32,8 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>
@@ -64,16 +45,9 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  								<span className="color-blue"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
+
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>
@@ -85,18 +59,9 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  								<span className="color-blue"></span>
-  								<span className="color-orange"></span>
-  								<span className="color-green"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
+
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>
@@ -110,18 +75,9 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  								<span className="color-blue"></span>
-  								<span className="color-orange"></span>
-  								<span className="color-green"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
+
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>
@@ -133,15 +89,9 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
+
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>
@@ -153,16 +103,9 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  								<span className="color-red"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
+
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>
@@ -174,15 +117,9 @@ export default class Lost_list extends React.Component {
   							<div className="title">
   								<h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
   							</div>
-  							<div className="colors">
-  								<span className="color-white"></span>
-  								<span className="color-black"></span>
-  							</div>
-  							<div className="price">
-  								$999.99
-  							</div>
+
   							<div className="actions">
-  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Add to Cart</a>
+  								<a href="page-product-details.html" className="btn btn-small"><i className="icon-shopping-cart icon-white"></i> Details</a>
   							</div>
   						</div>
   					</div>

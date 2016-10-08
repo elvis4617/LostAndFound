@@ -26,6 +26,7 @@ class Lost_page extends React.Component {
       <div>
         <Lost_header/>
         <Lost_list/>
+        <Footer/>
       </div>
     );
   }
