@@ -17,7 +17,7 @@ var initialData = {
       "lostItems": []
     }
   },
-  "items":{
+  "found-items":{
     "1": {
       "_id":new ObjectID("000000000000000000000001"),
       "post_user":new ObjectID("000000000000000000000002"),
@@ -32,7 +32,7 @@ var initialData = {
       "found_localtion":"ilc bus station",
       "current_localtion":"31 bus driver",
       "pic":"img/pic2.jpg",
-      "claim_userid":""
+      "claim_userid":null
     },
     "3": {
       "_id":new ObjectID("000000000000000000000003"),
@@ -40,7 +40,7 @@ var initialData = {
       "found_localtion":"lgrc library 3rd floot",
       "current_localtion":"lgrc library front desk",
       "pic":"img/pic3.jpg",
-      "claim_userid":""
+      "claim_userid":null
     }
   }
 };

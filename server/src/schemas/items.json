@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "post_user": {
+      "id": "post_user",
+      "type": "string"
+    },
+    "found_localtion": {
+      "id": "found_localtion",
+      "type": "string"
+    },
+    "current_localtion": {
+      "id": "current_localtion",
+      "type": "string"
+    },
+    "pic": {
+      "id": "pic",
+      "type": ["string", "null"]
+    }
+  },
+  "required": [
+    "poste_user",
+    "found_localtion",
+    "current_localtion",
+    "pic"
+  ]
+}

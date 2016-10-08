@@ -1,4 +1,8 @@
-
+export function getLossItem(cb){
+  sendXHR('GET', '/items', undefined, (xhr) =>{
+    cb(JSON.parse(xhr.responseText));
+  });
+}
 
 
 
@@ -6,7 +10,7 @@
 
 // here is the error handle function
 //Do not change anything here
-var token ='eyJpZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNCJ9'; // <-- Put your base64'd JSON token here
+var token ='eyJpZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSJ9'; // <-- Put your base64'd JSON token here
 /**
  * Properly configure+send an XMLHttpRequest with error handling, authorization token,
  * and other needed properties.
@@ -16,7 +20,7 @@ function sendXHR(verb, resource, body, cb) {
   xhr.open(verb, resource);
   xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 
-  // The below comment tells ESLint that FacebookError is a global.
+  // The below comment tells ESLint that Error is a global.
   // Otherwise, ESLint would complain about it! (See what happens in Atom if
   // you remove the comment...)
   /* global UbookError */
