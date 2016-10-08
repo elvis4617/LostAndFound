@@ -1,5 +1,5 @@
 export function getLossItem(cb){
-  sendXHR('GET', '/items', undefined, (xhr) =>{
+  sendXHR('GET', '/foundItems', undefined, (xhr) =>{
     cb(JSON.parse(xhr.responseText));
   });
 }

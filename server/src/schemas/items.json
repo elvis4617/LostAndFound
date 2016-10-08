@@ -7,12 +7,12 @@
       "id": "post_user",
       "type": "string"
     },
-    "found_localtion": {
-      "id": "found_localtion",
+    "found_location": {
+      "id": "found_location",
       "type": "string"
     },
-    "current_localtion": {
-      "id": "current_localtion",
+    "current_location": {
+      "id": "current_location",
       "type": "string"
     },
     "pic": {
@@ -22,8 +22,8 @@
   },
   "required": [
     "poste_user",
-    "found_localtion",
-    "current_localtion",
+    "found_location",
+    "current_location",
     "pic"
   ]
 }
