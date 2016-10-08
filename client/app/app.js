@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 import Navbar from './components/navbar.js';
+import Header from './components/header.js';
 import Sample from './components/sample.js';
 import Sample2 from './components/sample2.js';
 
@@ -33,6 +34,7 @@ class App extends React.Component {
       <div>
         <Navbar/>
         {this.props.children}
+        <Header/>
       </div>
     )
   }
