@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 import Navbar from './components/navbar.js';
-import Header from './components/header.js';
 import Body from './components/body.js'
 import Footer from './components/footer.js'
 import Sample from './components/sample.js';

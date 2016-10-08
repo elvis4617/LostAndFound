@@ -17,30 +17,30 @@ var initialData = {
       "lostItems": []
     }
   },
-  "items":{
+  "found-items":{
     "1": {
       "_id":new ObjectID("000000000000000000000001"),
       "post_user":new ObjectID("000000000000000000000002"),
-      "found_localtion":"outside of library",
-      "current_localtion":"library first floot",
+      "found_location":"outside of library",
+      "current_location":"library first floot",
       "pic":"img/pic1.jpg",
       "claim_userid":new ObjectID("000000000000000000000001")
     },
     "2": {
       "_id":new ObjectID("000000000000000000000002"),
       "post_user":new ObjectID("000000000000000000000001"),
-      "found_localtion":"ilc bus station",
-      "current_localtion":"31 bus driver",
+      "found_location":"ilc bus station",
+      "current_location":"31 bus driver",
       "pic":"img/pic2.jpg",
-      "claim_userid":""
+      "claim_userid":null
     },
     "3": {
       "_id":new ObjectID("000000000000000000000003"),
       "post_user":new ObjectID("000000000000000000000001"),
-      "found_localtion":"lgrc library 3rd floot",
-      "current_localtion":"lgrc library front desk",
+      "found_location":"lgrc library 3rd floot",
+      "current_location":"lgrc library front desk",
       "pic":"img/pic3.jpg",
-      "claim_userid":""
+      "claim_userid":null
     }
   }
 };

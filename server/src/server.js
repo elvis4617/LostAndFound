@@ -15,6 +15,59 @@ MongoClient.connect(url, function(err, db) {
   app.use(express.static('../client/build'));
   app.use('/mongo_express',mongo_express(mongo_express_config));
 
+  function resolveUserObjects(userList,callback){
+    if(userList.length===0){
+      callback(null,{});
+    }else{
+      var query = {
+        $or:userList.map((id)=>{return {_id:id}})
+      };
+      db.collection('users').find(query).toArray(function(err,users){
+        if(err){
+          return callback(err);
+        }
+        var userMap = {};
+        users.forEach((user)=>{
+          userMap[user._id]=user;
+        });
+        callback(null,userMap);
+      });
+    }
+  }
+
+  function sendDatabaseError(res, err) {
+    res.status(500).send("A database error occurred: " + err);
+  }
+
+
+  app.get('/foundItems', function(req, res){
+    db.collection('found-items').find({}).toArray(function(err, itemsarray){
+      if(err){
+        return sendDatabaseError(res,err);
+      } else {
+        var userlist = [];
+        itemsarray.forEach((item)=>{
+          userlist.push(item.post_user);
+          if(item.claim_userid !== null)
+            userlist.push(item.claim_userid);
+        });
+
+        resolveUserObjects(userlist, function(err, userMap){
+          if(err){
+            return sendDatabaseError(res, err);
+          }
+          itemsarray.forEach((item)=>{
+            item.post_user = userMap[item.post_user];
+            if(item.claim_userid !== null)
+              item.claim_userid = userMap[item.claim_userid];
+          });
+          res.send(itemsarray);
+        });
+      }
+    });
+  });
+
+
 /*-------------important:all function must above this line!!!----------------*/
   app.use(function(err, req, res, next) {
     if (err.name === 'JsonSchemaValidation') {
