@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 export default class Navbar extends React.Component {
   render() {
@@ -30,7 +31,9 @@ export default class Navbar extends React.Component {
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="notifications.html">Losses</a>
+                        <Link to={'/sample2'}>
+                          Losses
+                        </Link>
                     </li>
                     <li>
                         <a href="forum.html">Founds</a>
