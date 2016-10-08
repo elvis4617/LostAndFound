@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class Header extends React.Component {
   render() {
@@ -21,15 +22,9 @@ export default class Header extends React.Component {
             </div>
           </form>
           <div className="btn-group pull-right" role="group" aria-label="...">
-            <button type="button" className="btn btn-default navbar-btn">
+            <Link to={'/sample2'}><button type="button" className="btn btn-default navbar-btn">
               first button
-            </button>
-            <button type="button" className="btn btn-default navbar-btn">
-              second button
-            </button>
-            <button type="button" className="btn btn-default navbar-btn">
-              third button
-            </button>
+            </button></Link>
           </div>
         </div>
       </nav>
