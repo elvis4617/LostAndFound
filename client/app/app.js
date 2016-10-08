@@ -41,7 +41,6 @@ class App extends React.Component {
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      {/* Show the Feed at / */}
       <IndexRoute component={sample} />
       <Route path="/sample2" component={sample2} />
     </Route>
