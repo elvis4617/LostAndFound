@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 import Navbar from './components/navbar.js';
-<<<<<<< HEAD
-import Header from './components/header.js';
-=======
 import Body from './components/body.js'
 import Footer from './components/footer.js'
->>>>>>> d0a4450226b6d85c9a2d7e04f9098a162f38379d
 import Sample from './components/sample.js';
 import Lost_list from './components/lost_list.js';
 import Lost_header from './components/lost_header.js';

@@ -1,6 +1,20 @@
 import React from 'react';
+import {getLossItem} from '../request';
 
 export default class Lost_list extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      items:[]
+    };
+  }
+
+  componentDidMount(){
+    getLossItem((itemsarray)=>{
+      this.setState({items:itemsarray});
+    });
+  }
+
   render() {
     return (
       <div className="eshop-section section">

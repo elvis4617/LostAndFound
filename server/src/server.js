@@ -46,7 +46,23 @@ MongoClient.connect(url, function(err, db) {
         return sendDatabaseError(res,err);
       } else {
         var userlist = [];
-        itemsarray.forEach()
+        itemsarray.forEach((item)=>{
+          userlist.push(item.post_user);
+          if(item.claim_userid !== null)
+            userlist.push(item.claim_userid);
+        });
+
+        resolveUserObjects(userlist, function(err, userMap){
+          if(err){
+            return sendDatabaseError(res, err);
+          }
+          itemsarray.forEach((item)=>{
+            item.post_user = userMap[item.post_user];
+            if(item.claim_userid !== null)
+              item.claim_userid = userMap[item.claim_userid];
+          });
+          res.send(itemsarray);
+        });
       }
     });
   });
