@@ -23,7 +23,7 @@ var initialData = {
       "post_user":new ObjectID("000000000000000000000002"),
       "found_location":"outside of library",
       "current_location":"library first floot",
-      "pic":"img/pic1.jpg",
+      "pic":"img/product1.jpg",
       "claim_userid":new ObjectID("000000000000000000000001")
     },
     "2": {
@@ -31,7 +31,7 @@ var initialData = {
       "post_user":new ObjectID("000000000000000000000001"),
       "found_location":"ilc bus station",
       "current_location":"31 bus driver",
-      "pic":"img/pic2.jpg",
+      "pic":"img/product2.jpg",
       "claim_userid":null
     },
     "3": {
@@ -39,7 +39,7 @@ var initialData = {
       "post_user":new ObjectID("000000000000000000000001"),
       "found_location":"lgrc library 3rd floot",
       "current_location":"lgrc library front desk",
-      "pic":"img/pic3.jpg",
+      "pic":"img/product3.jpg",
       "claim_userid":null
     }
   }

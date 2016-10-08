@@ -5,7 +5,7 @@ var validate = require('express-jsonschema').validate;
 var MongoDB = require('mongodb');
 var MongoClient = MongoDB.MongoClient;
 var ObjectID = MongoDB.ObjectID;
-var url = 'mongodb://localhost:27017/LAF';
+var url = 'mongodb://localhost:27017/laf-data';
 var express = require('express');
 var app = express();
 
