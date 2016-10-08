@@ -3,24 +3,29 @@ import ReactDOM from 'react-dom';
 
 import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 import Navbar from './components/navbar.js';
+import Body from './components/body.js'
+import Footer from './components/footer.js'
 import Sample from './components/sample.js';
-import Sample2 from './components/sample2.js';
+import Lost_list from './components/lost_list.js';
+import Lost_header from './components/lost_header.js';
 
-class sample extends React.Component {
+class Landing extends React.Component {
   render() {
     return (
       <div>
-        <Sample/>
+        <Body />
+        <Footer />
       </div>
     );
   }
 }
 
-class sample2 extends React.Component {
+class Lost_page extends React.Component {
   render() {
     return (
       <div>
-        <Sample2/>
+        <Lost_header/>
+        <Lost_list/>
       </div>
     );
   }
@@ -33,6 +38,7 @@ class App extends React.Component {
       <div>
         <Navbar/>
         {this.props.children}
+
       </div>
     )
   }
@@ -41,8 +47,9 @@ class App extends React.Component {
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={sample} />
-      <Route path="/sample2" component={sample2} />
+      <IndexRoute component={Landing} />
+      <Route path="/landing" component={Landing} />
+      <Route path="/Lost_page" component={Lost_page} />
     </Route>
   </Router>
 ),document.getElementById('mybody'));
