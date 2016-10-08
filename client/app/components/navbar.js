@@ -30,7 +30,9 @@ export default class Navbar extends React.Component {
                           </Link>
                     </li>
                     <li className="page-scroll">
-                        <a id="menu-text-color3" className="menu-text-color" href="#found">Login</a>
+                        <Link to={'/Login'}>
+                          <span id="menu-text-color3">Login</span>
+                        </Link>
                     </li>
                 </ul>
             </div>

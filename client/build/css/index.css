@@ -1,4 +1,13 @@
-
+#login-username,
+#login-password{
+  width: 100%
+}
+#login-section{
+  margin: 80px 0px 50px;
+}
+#remember-checkbox{
+    margin-left: 20px;
+}
 
 #mainNav{
   background-color: #2C3E50;
