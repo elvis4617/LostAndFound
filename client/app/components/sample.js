@@ -3,7 +3,7 @@ import React from 'react';
 export default class Sample extends React.Component {
   render() {
     return (
-    <div>
+    <div className="sample1">
       Sample11111111111
     </div>
     )
