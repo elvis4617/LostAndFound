@@ -21,7 +21,7 @@
     }
   },
   "required": [
-    "poste_user",
+    "post_user",
     "found_location",
     "current_location",
     "pic"

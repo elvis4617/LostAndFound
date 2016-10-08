@@ -49,11 +49,6 @@ class App extends React.Component {
       <div>
         <Navbar/>
         {this.props.children}
-<<<<<<< HEAD
-        <Header/>
-=======
-
->>>>>>> d0a4450226b6d85c9a2d7e04f9098a162f38379d
       </div>
     )
   }

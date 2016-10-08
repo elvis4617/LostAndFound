@@ -41,7 +41,7 @@ MongoClient.connect(url, function(err, db) {
 
 
   app.get('/foundItems', function(req, res){
-    db.collection('found-items').find({}).toArray(function(err. itemsarray){
+    db.collection('found-items').find({}).toArray(function(err, itemsarray){
       if(err){
         return sendDatabaseError(res,err);
       } else {

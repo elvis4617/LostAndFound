@@ -1,5 +1,6 @@
 import React from 'react';
 import {getLossItem} from '../request';
+import ItemsDetail from './itemDetail.js';
 
 export default class Lost_list extends React.Component {
   constructor(props){
@@ -19,6 +20,22 @@ export default class Lost_list extends React.Component {
     return (
       <div className="eshop-section section">
   	    	<div className="container">
+
+
+
+          
+            <div className="row">
+              {this.state.items.map((item)=>{
+                return <ItemsDetail key={item._id} item={item} />
+              })}
+            </div>
+
+
+
+
+
+
+
   				<div className="row">
   					<div className="col-md-3 col-sm-6">
 
