@@ -3,7 +3,7 @@ import React from 'react';
 export default class Lost_list extends React.Component {
   render() {
     return (
-      <div className="eshop-section section">
+      <div className="eshop-section section" id="body">
   	    	<div className="container">
   				<div className="row">
   					<div className="col-md-3 col-sm-6">

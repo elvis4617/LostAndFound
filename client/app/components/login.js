@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 export default class Login_page extends React.Component {
   render() {
@@ -38,7 +39,7 @@ export default class Login_page extends React.Component {
 						</div>
 						<div className="clearfix"></div>
 						<div className="not-member">
-							<p>Not a member? <a href="page-register.html">Register here</a></p>
+							<p>Not a member? <Link to={'/Register'}>Register here</Link></p>
 						</div>
 					</div>
 				</div>
