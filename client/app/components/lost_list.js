@@ -18,7 +18,7 @@ export default class Lost_list extends React.Component {
 
   render() {
     return (
-      <div className="eshop-section section" id="body">
+      <div className="eshop-section section">
   	    	<div className="container">
             <div className="row">
               {this.state.items.map((item)=>{
