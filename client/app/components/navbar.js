@@ -7,13 +7,15 @@ export default class Navbar extends React.Component {
       <div>
       <nav id="mainNav" className="navbar navbar-default navbar-fixed-top navbar-custom">
         <div className="container">
-            <div className="navbar-header page-scroll" id="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#menu">
+            <div className="navbar-header">
+                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
                     <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
                 </button>
                 <Link to={'/Landing'}>
                   <span id="menu-text-color0" className="navbar-brand menu-text-color">Umass Found a Lost</span>
                 </Link>
+            </div>
+            <div className="collapse navbar-collapse" id="menu">
                 <form className= "navbar-form navbar-left" role ="search">
                   <div className= "input-group">
                     <input type ="text" className= "form-control" placeholder="Search A Lost"/>
@@ -24,9 +26,8 @@ export default class Navbar extends React.Component {
                       </span>
                   </div>
                 </form>
-            </div>
-            <div className="collapse navbar-collapse" id="menu">
-                <ul className="nav navbar-nav navbar-right" id="navbar-right">
+                <div className="nav navbar-nav navbar-right">
+                <ul className="list-inline" id="menuList">
                     <li className="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -49,6 +50,7 @@ export default class Navbar extends React.Component {
                         </Link>
                     </li>
                 </ul>
+                </div>
             </div>
         </div>
     </nav>

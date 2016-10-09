@@ -50,3 +50,12 @@
 #categoryinput input, #colorinput input{
   width:300px;
 }
+
+#menuList{
+  margin-bottom:0px;
+  margin-top:10px;
+}
+
+#menuList li a{
+  font-size:1.2em;
+}
