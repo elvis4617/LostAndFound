@@ -1,6 +1,7 @@
 import React from 'react';
 import {getLossItem} from '../request.js';
 import ItemsDetail from './itemDetail.js';
+import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 
 export default class Lost_list extends React.Component {
   constructor(props){
@@ -12,6 +13,7 @@ export default class Lost_list extends React.Component {
 
   componentDidMount(){
     getLossItem((itemsarray)=>{
+      console.log("aaaaaaaaa");
       this.setState({items:itemsarray});
     });
   }

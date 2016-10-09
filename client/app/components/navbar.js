@@ -2,6 +2,46 @@ import React from 'react';
 import {Link} from 'react-router'
 
 export default class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: props.searchTerm
+    };
+  }
+
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({
+      searchTerm: e.target.value
+    });
+  }
+
+  handleSearchButtonClick(e) {
+    e.preventDefault();
+    this.search();
+  }
+
+  search() {
+    var trimmedTerm = "";
+    if(this.state.searchTerm !== null)
+      trimmedTerm = this.state.searchTerm.trim();
+    if (trimmedTerm !== "") {
+      this.context.router.push({ pathname: "/searchresult", query: { q: trimmedTerm } });
+    }
+    this.setState({
+      searchTerm:''
+    });
+  }
+
+  componentWillReceiveProps(newProps) {
+  if (newProps.searchTerm !== null) {
+    this.setState({
+      searchTerm: newProps.searchTerm
+    });
+  }
+}
+
+
   render() {
     return (
       <div>
@@ -16,9 +56,9 @@ export default class Navbar extends React.Component {
                 </Link>
                 <form className= "navbar-form navbar-left" role ="search">
                   <div className= "input-group">
-                    <input type ="text" className= "form-control" placeholder="Search A Lost"/>
+                    <input type ="text" className= "form-control" placeholder="Search A Lost" onChange={(e)=>this.handleChange(e)}/>
                       <span className= "input-group-btn">
-                        <button type = "button" className= "btn btn-default" onclick="location.href='group_result.html'">
+                        <button type = "button" className= "btn btn-default" onClick={(e)=>this.handleSearchButtonClick(e)}>
                           <span className= "glyphicon glyphicon-search"></span>
                         </button>
                       </span>
@@ -91,3 +131,7 @@ export default class Navbar extends React.Component {
     )
   }
 }
+
+Navbar.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};

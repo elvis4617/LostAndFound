@@ -1,8 +1,18 @@
-export function getLossItem(cb){
-  sendXHR('GET', '/foundItems', undefined, (xhr) =>{
+export function searchLossItem(searchTerm, cb){
+  sendXHR('POST', '/foundItems/' + searchTerm, undefined, (xhr) => {
     cb(JSON.parse(xhr.responseText));
   });
 }
+
+
+export function getLossItem(cb){
+  sendXHR('GET', '/found', undefined, (xhr) => {
+    cb(JSON.parse(xhr.responseText));
+  });
+}
+
+
+
 
 
 

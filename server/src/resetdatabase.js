@@ -48,6 +48,10 @@ var initialData = {
   }
 };
 
+function addIndexes(db, cb) {
+  db.collection('found-items').createIndex({ "itemName": "text" }, null, cb);
+}
+
 
   /**
    * Resets a collection.
@@ -85,7 +89,7 @@ var initialData = {
         // Use myself as a callback.
         resetCollection(db, collection, processNextCollection);
       } else {
-        cb();
+        addIndexes(db,cb);
       }
     }
 

@@ -39,32 +39,62 @@ MongoClient.connect(url, function(err, db) {
     res.status(500).send("A database error occurred: " + err);
   }
 
+  app.get('/found', function(req, res){
+  db.collection('found-items').find({}).toArray(function(err, itemsarray){
+    if(err){
+      return sendDatabaseError(res,err);
+    } else {
+      var userlist = [];
+      itemsarray.forEach((item)=>{
+        userlist.push(item.post_user);
+        if(item.claim_userid !== null)
+          userlist.push(item.claim_userid);
+      });
 
-  app.get('/foundItems', function(req, res){
-    db.collection('found-items').find({}).toArray(function(err, itemsarray){
-      if(err){
-        return sendDatabaseError(res,err);
-      } else {
-        var userlist = [];
+      resolveUserObjects(userlist, function(err, userMap){
+        if(err){
+          return sendDatabaseError(res, err);
+        }
         itemsarray.forEach((item)=>{
-          userlist.push(item.post_user);
+          item.post_user = userMap[item.post_user];
           if(item.claim_userid !== null)
-            userlist.push(item.claim_userid);
+            item.claim_userid = userMap[item.claim_userid];
         });
+        res.send(itemsarray);
+      });
+    }
+  });
+});
 
-        resolveUserObjects(userlist, function(err, userMap){
-          if(err){
-            return sendDatabaseError(res, err);
-          }
+  app.post('/foundItems/:searchTerm', function(req, res){
+    var mysearch = req.params.searchTerm;
+
+      var reg = new RegExp(mysearch, "i");
+      db.collection('found-items').find({itemName:{$regex:reg}}).toArray(function(err, itemsarray){
+        if(err){
+          return sendDatabaseError(res,err);
+        } else {
+          var userlist = [];
           itemsarray.forEach((item)=>{
-            item.post_user = userMap[item.post_user];
+            userlist.push(item.post_user);
             if(item.claim_userid !== null)
-              item.claim_userid = userMap[item.claim_userid];
+              userlist.push(item.claim_userid);
           });
-          res.send(itemsarray);
-        });
-      }
-    });
+
+          resolveUserObjects(userlist, function(err, userMap){
+            if(err){
+              return sendDatabaseError(res, err);
+            }
+            itemsarray.forEach((item)=>{
+              item.post_user = userMap[item.post_user];
+              if(item.claim_userid !== null)
+                item.claim_userid = userMap[item.claim_userid];
+            });
+            res.send(itemsarray);
+          });
+        }
+      });
+
   });
 
 
