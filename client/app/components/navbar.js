@@ -38,7 +38,11 @@ export default class Navbar extends React.Component {
                             <span id="menu-text-color2">Losses</span>
                           </Link>
                     </li>
-
+                    <li className="page-scroll menu-text-color">
+                          <Link to={'/Claims'}>
+                            <span id="menu-text-color4">Claims</span>
+                          </Link>
+                    </li>
                     <li className="page-scroll">
                         <Link to={'/Login'}>
                           <span id="menu-text-color3">Login</span>

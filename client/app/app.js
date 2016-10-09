@@ -4,12 +4,23 @@ import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 import Navbar from './components/navbar.js';
 import Body from './components/body.js'
 import Footer from './components/footer.js'
-import Sample from './components/sample.js';
 import Lost_list from './components/lost_list.js';
 import Lost_header from './components/lost_header.js';
 import Login_page from './components/login.js';
 import Register_page from './components/register.js';
 import Report_page from './components/modal.js';
+import Claim_page from './components/claim_items.js';
+
+class Claims extends React.Component{
+  render(){
+    return(
+      <div>
+        <Claim_page/>
+        <Footer/>
+      </div>
+    );
+  }
+}
 
 class Report extends React.Component {
   render() {
@@ -84,6 +95,7 @@ ReactDOM.render((
       <Route path="/Lost_page" component={Lost_page} />
       <Route path="/Login" components={Login}/>
       <Route path="/Register" components={Register}/>
+      <Route path="/Claims" components={Claims}/>
     </Route>
   </Router>
 ),document.getElementById('mybody'));

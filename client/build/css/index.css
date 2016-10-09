@@ -23,12 +23,9 @@
 #menu-text-color0,
 #menu-text-color1,
 #menu-text-color2,
-#menu-text-color3{
+#menu-text-color3,
+#menu-text-color4{
   color: white;
-}
-
-#dsample2{
-  padding-top: 150px;
 }
 
 #body{
