@@ -38,7 +38,11 @@ export default class Navbar extends React.Component {
                             <span id="menu-text-color2">Losses</span>
                           </Link>
                     </li>
-
+                    <li className="page-scroll menu-text-color">
+                          <Link to={'/Claims'}>
+                            <span id="menu-text-color4">Claims</span>
+                          </Link>
+                    </li>
                     <li className="page-scroll">
                         <Link to={'/Login'}>
                           <span id="menu-text-color3">Login</span>
@@ -51,16 +55,31 @@ export default class Navbar extends React.Component {
 
     <div className="modal fade" id="modal-content-1" role="dialog">
       <div className="modal-dialog">
-
         <div className="modal-content">
           <div className="modal-header">
             <button type="button" className="close" data-dismiss="modal">&times;</button>
-            <h4 className="modal-title">Join Us Now! <small>Someone</small></h4>
+            <h4 className="modal-title">Report Items</h4>
           </div>
           <div className="modal-body">
-            <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet blandit maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec convallis erat a ante porta vehicula. Vivamus maximus justo non purus tempor consequat. Mauris eleifend lorem dui. className aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In pellentesque commodo elementum. In id maximus lectus, sit amet ornare nibh. Aliquam tristique, nunc ac imperdiet rutrum, urna ex consectetur mi, in dapibus orci quam in diam. Nam vel arcu a diam facilisis lacinia nec vitae diam. Curabitur tincidunt ipsum et nunc placerat, at cursus mauris bibendum. Nam mi leo, pharetra in felis sit amet, aliquet viverra dolor. Nunc pharetra dignissim risus.
-            </p>
+            <form>
+              <div className="form-group" id="categoryinput">
+                <label for="InputItemCategory">Item Category</label>
+                <input type="category" className="form-control" id="InputItemCategory" placeholder="category here" />
+              </div>
+              <div className="form-group" id="colorinput">
+                <label for="InputItemColor">Item Color</label>
+                <input type="color" className="form-control" id="InputItemColor" placeholder="color here"/>
+              </div>
+              <div className="form-group" id="descriptioninput">
+                <label for="InputItemDescription">Item Description</label>
+                <textarea className="form-control" id="InputItemDescription" rows="3"></textarea>
+              </div>
+              <div className="form-group" id="picturenput">
+                <label for="exampleInputFile">Item Picture</label>
+                <input type="file" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp"/>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
