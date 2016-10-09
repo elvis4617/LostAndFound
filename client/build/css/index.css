@@ -39,6 +39,9 @@
   #body{
     height:896px;
   }
+  #login-section{
+    height:719px;
+  }
 }
 
 @media screen and (min-height:1001px){
