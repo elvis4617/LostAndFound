@@ -1,18 +1,8 @@
-.modal-container {
-  position: relative;
-}
-.modal-container .modal, .modal-container .modal-backdrop {
-  position: absolute;
-}
-
 #login-username,
 #login-password{
   width: 100%;
 }
 
-#body{
-  height: 100%;
-}
 #login-section{
   margin: 80px 0px 97px;
   height:100%;
@@ -37,6 +27,16 @@
   color: white;
 }
 
-#sample2{
+#dsample2{
   padding-top: 150px;
+}
+
+#body{
+  height:1000px;
+}
+
+@media screen and (max-height:970px){
+  #body{
+    height:900px;
+  }
 }
