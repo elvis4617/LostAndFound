@@ -28,20 +28,6 @@
   color: white;
 }
 
-<<<<<<< HEAD
-#dsample2{
-  padding-top: 150px;
-=======
-#body{
-  height:1000px;
-}
-
-@media screen and (max-height:970px){
-  #body{
-    height:900px;
-  }
->>>>>>> 7e75e3048135bcfeb9c1a2dbcad4f5a7b80a4371
-}
 
 @media screen and (max-height:836px){
   #body{
@@ -49,7 +35,7 @@
   }
 }
 
-@media screen and (max-height:1000px){
+@media screen and (min-height:837px){
   #body{
     height:930px;
   }
