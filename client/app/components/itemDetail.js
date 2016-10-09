@@ -11,6 +11,7 @@ export default class ItemsDetail extends React.Component {
           </div>
           <div className="col-md-5">
             <h4>Post user: {this.props.item.post_user.fullName}</h4>
+            <h4>item name: {this.props.item.itemName}</h4>
             <h4>found location: {this.props.item.found_location}</h4>
             <h4>found location: {this.props.item.current_location}</h4>
           </div>

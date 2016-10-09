@@ -20,6 +20,7 @@ var initialData = {
   "found-items":{
     "1": {
       "_id":new ObjectID("000000000000000000000001"),
+      "itemName":"phone",
       "post_user":new ObjectID("000000000000000000000002"),
       "found_location":"outside of library",
       "current_location":"library first floot",
@@ -28,6 +29,7 @@ var initialData = {
     },
     "2": {
       "_id":new ObjectID("000000000000000000000002"),
+      "itemName":"card",
       "post_user":new ObjectID("000000000000000000000001"),
       "found_location":"ilc bus station",
       "current_location":"31 bus driver",
@@ -36,6 +38,7 @@ var initialData = {
     },
     "3": {
       "_id":new ObjectID("000000000000000000000003"),
+      "itemName":"keys",
       "post_user":new ObjectID("000000000000000000000001"),
       "found_location":"lgrc library 3rd floot",
       "current_location":"lgrc library front desk",
