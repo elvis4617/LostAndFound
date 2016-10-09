@@ -7,7 +7,7 @@ export default class Navbar extends React.Component {
       <div>
       <nav id="mainNav" className="navbar navbar-default navbar-fixed-top navbar-custom">
         <div className="container">
-            <div className="navbar-header page-scroll">
+            <div className="navbar-header page-scroll" id="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#menu">
                     <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
                 </button>
@@ -25,8 +25,8 @@ export default class Navbar extends React.Component {
                   </div>
                 </form>
             </div>
-            <div className="collapse navbar-collapse">
-                <ul className="nav navbar-nav navbar-right">
+            <div className="collapse navbar-collapse" id="menu">
+                <ul className="nav navbar-nav navbar-right" id="navbar-right">
                     <li className="hidden">
                         <a href="#page-top"></a>
                     </li>
