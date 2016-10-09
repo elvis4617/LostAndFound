@@ -37,16 +37,29 @@
 
 @media screen and (min-height:837px){
   #body{
-    height:930px;
+    height:896px;
+  }
+  #login-section{
+    height:719px;
   }
 }
 
 @media screen and (min-height:1001px){
   #body{
-    height:1130px;
+    height:1100px;
   }
 }
 
 #categoryinput input, #colorinput input{
   width:300px;
+}
+
+#menuList{
+  margin-bottom:0px;
+  margin-top:10px;
+}
+
+#menuList li a{
+  font-size:1.2em;
+  font-weight: 100;
 }
