@@ -23,12 +23,24 @@
 #menu-text-color0,
 #menu-text-color1,
 #menu-text-color2,
-#menu-text-color3{
+#menu-text-color3,
+#menu-text-color4{
   color: white;
 }
 
+<<<<<<< HEAD
 #dsample2{
   padding-top: 150px;
+=======
+#body{
+  height:1000px;
+}
+
+@media screen and (max-height:970px){
+  #body{
+    height:900px;
+  }
+>>>>>>> 7e75e3048135bcfeb9c1a2dbcad4f5a7b80a4371
 }
 
 @media screen and (max-height:836px){

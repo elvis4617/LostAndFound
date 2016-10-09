@@ -4,15 +4,18 @@ export default class ItemsDetail extends React.Component {
   render() {
     return (
       <div>
-        <div className="shop-item">
-          <div className="shop-item-image">
-            <a href="page-product-details.html"><img src={this.props.item.pic} alt="Item Name"/></a>
+        <center>
+        <div className="row shop-item">
+          <div className="col-md-7 shop-item-image">
+            <img src={this.props.item.pic} alt="Item Name"/>
           </div>
-          <div className="title">
-            <h3><a href="page-product-details.html">Post user: {this.props.item.post_user.fullName}</a></h3>
-            <h3><a href="page-product-details.html">found location: {this.props.item.found_location}</a></h3>
+          <div className="col-md-5">
+            <h4>Post user: {this.props.item.post_user.fullName}</h4>
+            <h4>found location: {this.props.item.found_location}</h4>
+            <h4>found location: {this.props.item.current_location}</h4>
           </div>
         </div>
+        </center>
       </div>
     )
   }

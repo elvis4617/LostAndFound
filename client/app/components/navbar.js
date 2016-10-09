@@ -14,6 +14,16 @@ export default class Navbar extends React.Component {
                 <Link to={'/Landing'}>
                   <span id="menu-text-color0" className="navbar-brand menu-text-color">Umass Found a Lost</span>
                 </Link>
+                <form className= "navbar-form navbar-left" role ="search">
+                  <div className= "input-group">
+                    <input type ="text" className= "form-control" placeholder="Search A Lost"/>
+                      <span className= "input-group-btn">
+                        <button type = "button" className= "btn btn-default" onclick="location.href='group_result.html'">
+                          <span className= "glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                  </div>
+                </form>
             </div>
             <div className="collapse navbar-collapse">
                 <ul className="nav navbar-nav navbar-right">
@@ -28,7 +38,11 @@ export default class Navbar extends React.Component {
                             <span id="menu-text-color2">Losses</span>
                           </Link>
                     </li>
-
+                    <li className="page-scroll menu-text-color">
+                          <Link to={'/Claims'}>
+                            <span id="menu-text-color4">Claims</span>
+                          </Link>
+                    </li>
                     <li className="page-scroll">
                         <Link to={'/Login'}>
                           <span id="menu-text-color3">Login</span>
